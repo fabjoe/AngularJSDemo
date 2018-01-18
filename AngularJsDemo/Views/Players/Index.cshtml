@@ -1,0 +1,112 @@
+﻿<div ng-app="myApp">
+ 
+    <div ng-controller="playersCtrl" ng-init="GetAllPlayers()" class="divList">
+        <p class="divHead">List of Players</p>
+
+        <div dx-chart="{
+    dataSource: [
+        { fruit: 'Oranges', total: 10 },
+        { fruit: 'Apples', total: 15 },
+        { fruit: 'Bananas', total: 9 }
+    ],
+    series: { argumentField: 'fruit', valueField: 'total' }
+ }"></div>
+        <table cellpadding="12" class="table table-bordered table-hover">
+            <tr>
+                <td>
+                    <b>PlayerID</b>
+                </td>
+                <td>
+                    <b>PlayerName</b>
+                </td>
+                <td>
+                    <b>MinsPerGame</b>
+                </td>
+                <td>
+                    <b>EffPerGame</b>
+                </td>
+                <td>
+                    <b>EffMin</b>
+                </td>
+                <td>
+                    <b>GamesPlayed</b>
+                </td>
+                <td>
+                    <b>FieldsGoalPercentage</b>
+                </td>
+                <td>
+                    <b>ThreePointsPercentage</b>
+                </td>
+                <td>
+                    <b>FreeThrowsPercentage</b>
+                </td>
+                <td>
+                    <b>ReboundsPerGame</b>
+                </td>
+                <td>
+                    <b>AssistsPerGame</b>
+                </td>
+                <td>
+                    <b>StealsPerGame</b>
+                </td>
+                <td>
+                    <b>BlocksPerGame</b>
+                </td>
+                <td>
+                    <b>TurnoversPerGame</b>
+                </td>
+                <td>
+                    <b>PointsPerGame</b>
+                </td>
+
+            </tr>
+            <tr ng-repeat="Player in players">
+                <td>
+                    {{Player.PlayerID}}
+                </td>
+                <td>
+                    {{Player.PlayerName}}
+                </td>
+                <td>
+                    {{Player.MinsPerGame}}
+                </td>
+                <td>
+                    {{Player.EffPerGame}}
+                </td>
+                <td>
+                    {{Player.EffMin}}
+                </td>
+                <td>
+                    {{Player.GamesPlayed}}
+                </td>
+                <td>
+                    {{Player.FieldsGoalPercentage}}
+                </td>
+                <td>
+                    {{Player.ThreePointsPercentage}}
+                </td>
+                <td>
+                    {{Player.FreeThrowsPercentage}}
+                </td>
+                <td>
+                    {{Player.ReboundsPerGame}}
+                </td>
+                <td>
+                    {{Player.AssistsPerGame}}
+                </td>
+                <td>
+                    {{Player.StealsPerGame}}
+                </td>
+                <td>
+                    {{Player.BlocksPerGame}}
+                </td>
+                <td>
+                    {{Player.TurnoversPerGame}}
+                </td>
+                <td>
+                    {{Player.PointsPerGame}}
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
